@@ -1,4 +1,4 @@
-# CSC487_Application
+# K-Imager
 
 This project is my Senior Project at Wilmington University. I
 designed this project to be useful for art teachers and students.
