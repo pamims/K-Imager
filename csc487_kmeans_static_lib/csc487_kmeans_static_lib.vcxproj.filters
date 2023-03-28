@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\CC_h">
+      <UniqueIdentifier>{bc4e644a-910c-42f6-a585-5513371374c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CC_cpp">
+      <UniqueIdentifier>{d7a569fc-6628-4815-af1c-c4911a9474ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NuGet">
+      <UniqueIdentifier>{01bfc1c7-2cc8-4efc-8787-c3ec33693be8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Algorithm.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Constants.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Converter.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Interface.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Mapper.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+    <ClInclude Include="CC_Point.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+    <ClInclude Include="CImg\CImg.h">
+      <Filter>Header Files\CC_h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CC_Algorithm.cpp">
+      <Filter>Source Files\CC_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CC_Converter.cpp">
+      <Filter>Source Files\CC_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CC_Interface.cpp">
+      <Filter>Source Files\CC_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CC_Mapper.cpp">
+      <Filter>Source Files\CC_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CC_Point.cpp">
+      <Filter>Source Files\CC_cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="NuGet\libpng.static.txt">
+      <Filter>NuGet</Filter>
+    </Text>
+    <Text Include="NuGet\zlib.static.txt">
+      <Filter>NuGet</Filter>
+    </Text>
+    <Text Include="CImg\Licence_CeCILL_V2-en.txt" />
+    <Text Include="CImg\Licence_CeCILL-C_V1-en.txt" />
+    <Text Include="CImg\README.txt" />
+  </ItemGroup>
+</Project>
