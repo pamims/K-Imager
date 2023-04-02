@@ -753,6 +753,10 @@ namespace gui {
 		for (HWND control : controls) {
 			EnableWindow(control, FALSE);
 		}
+
+		// Disable the close-program [x] button
+		HMENU hSysMenu = GetSystemMenu(hWnd, FALSE);
+		EnableMenuItem(hSysMenu, SC_CLOSE, MF_BYCOMMAND | MF_GRAYED);
 	}
 
 	void EnableMinimumControls(HWND hWnd) {
@@ -765,6 +769,10 @@ namespace gui {
 		for (HWND control : controls) {
 			EnableWindow(control, TRUE);
 		}
+
+		// Enable the close-program [x] button
+		HMENU hSysMenu = GetSystemMenu(hWnd, FALSE);
+		EnableMenuItem(hSysMenu, SC_CLOSE, MF_BYCOMMAND | MF_ENABLED);
 	}
 
 	void EnableRunControls(HWND hWnd) {
