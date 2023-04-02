@@ -515,6 +515,7 @@ namespace gui {
 						if (!filename.empty()) {
 
 							cc_interface->Save(filename.c_str());
+							EnableAllControls(window);
 							break;
 						}
 						else {
