@@ -523,7 +523,7 @@ namespace gui {
 						}
 					}
 					else {
-						ErrorMessage("This program cannot handle unicode characters. Please use ASCII characters.");
+						//ErrorMessage("This program cannot handle unicode characters. Please use ASCII characters.");
 					}
 				}
 				else {
@@ -693,6 +693,9 @@ namespace gui {
 
 						if (SUCCEEDED(result)) {
 							return_value = pwstr_to_string(filename);
+							if (!return_value.has_value()) {
+								error_message = "This program cannot handle unicode characters. Please use ASCII characters.";
+							}
 							CoTaskMemFree(filename);
 						}
 						else {
