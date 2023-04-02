@@ -515,6 +515,7 @@ namespace gui {
 						if (!filename.empty()) {
 
 							cc_interface->Save(filename.c_str());
+							EnableAllControls(window);
 							break;
 						}
 						else {
@@ -522,7 +523,7 @@ namespace gui {
 						}
 					}
 					else {
-						ErrorMessage("This program cannot handle unicode characters. Please use ASCII characters.");
+						//ErrorMessage("This program cannot handle unicode characters. Please use ASCII characters.");
 					}
 				}
 				else {
@@ -692,6 +693,9 @@ namespace gui {
 
 						if (SUCCEEDED(result)) {
 							return_value = pwstr_to_string(filename);
+							if (!return_value.has_value()) {
+								error_message = "This program cannot handle unicode characters. Please use ASCII characters.";
+							}
 							CoTaskMemFree(filename);
 						}
 						else {
@@ -749,6 +753,10 @@ namespace gui {
 		for (HWND control : controls) {
 			EnableWindow(control, FALSE);
 		}
+
+		// Disable the close-program [x] button
+		HMENU hSysMenu = GetSystemMenu(hWnd, FALSE);
+		EnableMenuItem(hSysMenu, SC_CLOSE, MF_BYCOMMAND | MF_GRAYED);
 	}
 
 	void EnableMinimumControls(HWND hWnd) {
@@ -761,6 +769,10 @@ namespace gui {
 		for (HWND control : controls) {
 			EnableWindow(control, TRUE);
 		}
+
+		// Enable the close-program [x] button
+		HMENU hSysMenu = GetSystemMenu(hWnd, FALSE);
+		EnableMenuItem(hSysMenu, SC_CLOSE, MF_BYCOMMAND | MF_ENABLED);
 	}
 
 	void EnableRunControls(HWND hWnd) {
