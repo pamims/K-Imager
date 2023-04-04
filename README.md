@@ -1,31 +1,19 @@
 # K-Imager
 
-This project is my Senior Project at Wilmington University. I
-designed this project to be useful for art teachers and students.
+### Project Objective:
+The objective of this project is to create an application that generates limited color palette images from full color photos to assist art teachers and students in practicing drawing and painting.
 
-This application processes images into a limited color palette to help
-students practice drawing and painting.  I got this idea from an art
-project I remember making in highschool where we were specifically
-supposed to paint a limited-palette picture from a photo.
+### Benefits:
+The application simplifies the process of selecting colors and helps students understand the importance of color choice in art. It encourages creativity by limiting the color palette and provides a fun and interactive way for students to practice their skills.
 
-The controls should be intuitive.  You first select an image from your
-saved files.  Currently, this program supports .gif, .png, and .jpeg
-image formats.  Then you can select how many colors you would like to
-reduce the palette to, whether the image should be made grayscale, and
-which processing mode you would like to apply.
+### User Interface:
+The application's interface is intuitive and user-friendly. Users first select an image from their saved files, then select the number of colors they want to reduce the palette to, whether to make the image greyscale, and which processing mode to apply. The application currently supports .bmp, .png, and .jpeg image formats. After these steps, users can hit the "RUN" button and save the resulting limited color palette image.
 
-After these steps, you can hit the big RUN button and SAVE the result.
+### Processing Modes:
+The processing modes are all based on the k-means algorithm, which analyzes the image and selects the most representative colors. Algorithms specified as "unweighted" do not include duplicate pixel colors in their calculation, while algorithms specified as "++" use a smarter algorithm for selecting colors, reducing the randomness of the result. If users want more randomness, they should not use "++." If an image has a lot of same-colored background, users can try an unweighted algorithm. The result will likely be slightly different every time the "RUN" button is pressed, as the k-means algorithm relies on randomly selecting starting points.
 
-The processing modes are all similar and are based on the k-means
-algorithm.  Algorithms specified as "unweighted" do not include duplicate
-pixel colors in their calculation. Algorithms specified as '++' use a
-smarter algorithm for selecting colors, reducing the randomness of the
-result.  If you want more randomness, do not use ++.  If you have an
-image with a lot of same-colored background, try an unweighted algorithm.
+### User Feedback:
+User feedback is essential to improving the application. Users are encouraged to report any bugs they encounter or provide feedback on the application's features and usability.
 
-Regardless of the mode you choose, the result will likely be at least
-slightly different every time the run button is pressed because part of
-the k-means algorithm relies on randomly selecting starting points.
-
-If you have any comments or feedback or if you find any bugs, please
-let me know!
+### Conclusion:
+This project provides a valuable tool for art teachers and students to improve their skills and explore the creative possibilities of a limited color palette. Users are encouraged to try out the application and provide feedback to help improve and develop new features.
